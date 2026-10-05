@@ -1,0 +1,128 @@
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Container Fix */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* Base Card (White State) */
+.card, .pfp, .pfp2 {
+    background-color: #FFFFFF;
+    width: 280px;
+    min-height: 400px;
+    text-align: center;
+    color: #333333;
+    padding: 20px;
+    border-radius: 14px;
+    border: 2px solid #EAEAEA;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    margin: 0 !important; /* Cleanup manual margins */
+}
+
+.card img, .pfp img, .pfp2 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #813E9A;
+    object-fit: cover;
+    margin-top: 5px;
+    transition: all 0.35s ease;
+}
+
+/* Base Button Styles */
+button {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.25s ease-in-out !important;
+}
+
+#one, #three, #five {
+    background-color: #FFFFFF;
+    color: #813E9A;
+    width: 100px;
+    height: 35px;
+    border: 2px solid #813E9A;
+    margin-right: 5px;
+}
+
+#two, #four, #six {
+    background-color: #813E9A;
+    color: #FFFFFF;
+    width: 100px;
+    height: 35px;
+    border: 2px solid #813E9A;
+    margin-left: 5px;
+}
+
+/* ===================================================
+   1. CARD HOVER (White Card becomes Solid Purple)
+   =================================================== */
+.card:hover, .pfp:hover, .pfp2:hover {
+    background-color: #813E9A;
+    color: #FFFFFF;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(129, 62, 154, 0.4);
+    border-color: #813E9A;
+}
+
+/* Card content color change on hover */
+.card:hover p, .pfp:hover p, .pfp2:hover p,
+.card:hover h3, .pfp:hover h3, .pfp2:hover h3 {
+    color: #FFFFFF;
+}
+
+.card:hover img, .pfp:hover img, .pfp2:hover img {
+    border-color: #FFFFFF;
+    transform: scale(1.08);
+}
+
+/* Card hover hone par buttons ki appearance change hoti hai */
+.card:hover #one, .pfp:hover #three, .pfp2:hover #five {
+    background-color: #FFFFFF;
+    color: #813E9A;
+    border-color: #FFFFFF;
+}
+
+.card:hover #two, .pfp:hover #four, .pfp2:hover #six {
+    background-color: transparent;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+/* ===================================================
+   2. BUTTON SPECIFIC HOVER (Jab mouse button pe jaye)
+   =================================================== */
+
+/* Read More Button Hover */
+#one:hover, #three:hover, #five:hover {
+    background-color: #1A1A1A !important; /* Sharp Dark Accent */
+    color: #FFFFFF !important;
+    border-color: #1A1A1A !important;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Submit Button Hover */
+#two:hover, #four:hover, #six:hover {
+    background-color: #FFFFFF !important; /* Solid White Glow */
+    color: #813E9A !important;
+    border-color: #FFFFFF !important;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
